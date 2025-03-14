@@ -135,15 +135,17 @@ ORDER BY
 ## **📈 Interactive Tableau Dashboard**  
 ### **Key KPIs & Visualizations:**
 ✅ **Average Maternal Mortality Ratio (MMR) per country**  
-✅ **% of Births Attended by Skilled Personnel**  
-✅ **Health Facilities per 100,000 People (No Decimals)**  
-✅ **Medical Doctor Density per 1,000 People**  
-✅ **Heatmaps & Trend Analysis by Year**  
+✅ **Medical Doctor Density per 1,000 People**
+✅ **Maternal Mortality trend from 2015-2020**   
+✅ **Top 10 countries with highest maternal deaths**  
+✅ **Heatmaps & Trend Analysis by Year** 
+✅ **Health Expenditure in usd for Subsaharan countries** 
 
 📌 **Dynamic Features:**
-✔️ **Filters by Country & Year**  
+ 
+✔️ **Filters by Country on Heatmap**  
 ✔️ **Interactive Maps & Bar Charts**  
-✔️ **Comparisons of Maternal Mortality vs Economic Indicators**  
+✔️ **Comparisons of Maternal Mortality vs Economic Indicators** 
 
 🔗 **[View the Tableau Dashboard](https://public.tableau.com/shared/?:display_count=n&:origin=viz_share_link)**
 
