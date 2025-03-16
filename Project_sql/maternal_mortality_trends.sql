@@ -39,7 +39,7 @@ ORDER BY
 country, year
 
 
---what countries have the largest gap btn th MMR AND target
+--What countries have the highest gaps between their maternal mortality ratio and target
 
 WITH ranked_gaps AS(
     SELECT DISTINCT ON (country) 

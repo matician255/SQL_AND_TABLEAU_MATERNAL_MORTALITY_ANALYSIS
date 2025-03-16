@@ -4,16 +4,24 @@
 ## **📌 Project Overview**  
 This project explores the factors influencing **maternal mortality** in **Sub-Saharan Africa**, using **SQL for data transformation and analysis** and **Tableau for interactive visualizations**.
 
-🚀 **Key Objectives:**  
-✔️ Identify key socioeconomic and healthcare factors affecting maternal health.  
-✔️ Analyze trends in **maternal mortality**  
-✔️ Showcase **SQL querying, data transformation, and Tableau dashboarding skills**.  
+**Checkout my indepth analysis here** : [Project_Analysis](/Project_sql/)
+
+🚀 **The question that am trying to answer are:**  
+✔️ What are key socioeconomic and healthcare factors affecting maternal health outcomes.  
+✔️ What subsaharan countries have high maternal mortality**  
+✔️ What is the trend of maternal mortality 2015-2020  
+✔️ What countries are meeting their maternal mortality targets and what countries still have alot to do.
+
 
 
 ----
 ## 🛠Tools Used
 
-**SQL**: For data cleaning, transformation, and analysis.
+**SQL**: For data cleaning, transformation, and analysis.  
+
+**PostgreSQL**: The chosen database management system, ideal for handling the data.
+
+**Visual Studio Code**: My go-to for database management and executing SQL queries.
 
 **Tableau**: For creating interactive dashboards and visualizations.
 
@@ -24,6 +32,7 @@ This project explores the factors influencing **maternal mortality** in **Sub-Sa
 ✅ **SQL:** Data Cleaning, Joins, Aggregations, Feature Engineering.  
 ✅ **Tableau:** KPI Dashboards, Dynamic Filters, Interactive Maps.  
 ✅ **Data Analysis:** Identifying patterns, correlations, and trends in maternal health data.
+✅ **Problem solving skiils** At the end i provide my expert data driven opinion on how to improve maternal health outcomes
 
 ## **📊 Data Sources & Structure**  
 The project is built using **9 datasets**, each representing critical maternal health indicators:  
@@ -131,6 +140,48 @@ GROUP BY
 ORDER BY 
     year;
 ```
+
+## 🚀🚀🚀*sneak peek of my indepth analysis*
+
+### 🚀countries with high health investment but poor health outcomes
+```SQL
+SELECT
+    maternal_mortality.country,
+    maternal_mortality.year,
+    maternal_mortality.mm_measure,
+    health_expenditure.exp_measure
+FROM
+    maternal_mortality
+JOIN health_expenditure ON maternal_mortality.country = health_expenditure.country 
+AND maternal_mortality.year = health_expenditure.year 
+WHERE
+mm_measure > 400 AND
+exp_measure > 150
+ORDER BY mm_measure DESC;
+```
+## *Insights*
+
+
+### 🚀countries with fastest reduction in maternal deaths
+```sql
+WITH mortality_change AS (
+    SELECT country, 
+           MAX(md_measure) - MIN(md_measure) AS reduction,
+           MIN(year) AS start_year, MAX(year) AS end_year
+    FROM maternal_deaths
+    GROUP BY country
+)
+SELECT 
+    country, 
+    reduction, 
+    start_year, 
+    end_year
+FROM 
+    mortality_change
+ORDER BY reduction DESC;
+```
+## *Insights*
+
 ---  
 ## **📈 Interactive Tableau Dashboard**  
 ### **Key KPIs & Visualizations:**
@@ -147,8 +198,10 @@ ORDER BY
 ✔️ **Interactive Maps & Bar Charts**  
 ✔️ **Comparisons of Maternal Mortality vs Economic Indicators** 
 
-🔗 **[View the Tableau Dashboard](https://public.tableau.com/shared/?:display_count=n&:origin=viz_share_link)**
+🔗 **[View the Tableau Interactive Dashboard](https://public.tableau.com/shared/?:display_count=n&:origin=viz_share_link)**
 
+*Image of the Tableau dashboard*
+![Tableau dashboard](<Project_sql/Dashboard 2.png>)
 
 
 ---  
