@@ -33,6 +33,9 @@ ORDER BY
 LIMIT 10;
 ```
 
+## *Insights*
+
+
 ### 🚀 Maternal Mortality trend over time
 ```sql
 SELECT 
@@ -45,6 +48,10 @@ GROUP BY
 ORDER BY 
     year;
 ```
+
+## *Insights*
+
+
 ### 🚀 What countries met their target mortality ratio
 ```sql
 SELECT 
@@ -57,6 +64,10 @@ mm_measure <= mm_target
 ORDER BY
 country, year
 ```
+
+## *Insights*
+
+
 ### 🚀 What countries have the highest gaps between their maternal mortality ratio and target
 ```sql
 WITH ranked_gaps AS(
@@ -78,6 +89,8 @@ FROM
     ranked_gaps
 ORDER BY GAP DESC;
 ```
+## *Insights*
+
 
 ## 📌RELATIOSHIP BETWEEN SOCIOECONOMIC, HEALTHCARE FACTORS AND MATERNAL HEALTH OUTCOMES
 
@@ -99,6 +112,8 @@ JOIN
 
 ORDER BY mm_measure DESC
 ```
+## *Insights*
+
 
 ### 🚀Is healthcare expenditure linked to better health outcomes
 ```SQL
@@ -114,6 +129,8 @@ JOIN
     AND maternal_deaths.year = health_expenditure.year
 ORDER BY m_deaths DESC;
 ```
+## *Insights*
+
 
 ### 🚀Do more health facilities reduce maternal mortality
 ```SQL
@@ -135,6 +152,8 @@ SELECT
 FROM expenditure_vs_mm
 ORDER BY m_deaths DESC;
 ```
+## *Insights*
+
 
 ### 🚀Is higher doctor density linked to lower mortality 
 ```SQL
@@ -157,6 +176,8 @@ SELECT
 FROM m_deaths_vs_doctors
 ORDER BY m_deaths DESC;
 ```
+
+## *Insights*
 
 
 ## 📌SOCIOECONOMIC FACTORS
@@ -185,6 +206,8 @@ SELECT
 FROM mm_poverty
 ORDER BY mm_measure DESC;
 ```
+## *Insights*
+
 
 ### 🚀 Does unemployment affect maternal mortality?
 ```SQL
@@ -200,3 +223,5 @@ ON maternal_mortality.country = unemployment_rate.country
 AND maternal_mortality.year = unemployment_rate.year
 ORDER BY maternal_mortality.mm_measure DESC;
 ```
+
+## *Insights*
