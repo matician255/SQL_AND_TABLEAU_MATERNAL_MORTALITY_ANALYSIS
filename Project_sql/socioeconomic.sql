@@ -37,7 +37,7 @@ ORDER BY maternal_mortality.mm_measure DESC;
 
 
 ---countries with high health investment but poor health outcomes
-SELECT
+SELECT DISTINCT ON (maternal_mortality.country)
     maternal_mortality.country,
     maternal_mortality.year,
     maternal_mortality.mm_measure,
@@ -51,7 +51,7 @@ mm_measure > 400 AND
 exp_measure > 150
 ORDER BY mm_measure DESC;
 
--- countries with fastest reduction in maternal deaths
+-- top 10 countries with fastest reduction in maternal deaths
 
 WITH mortality_change AS (
     SELECT country, 
@@ -67,4 +67,5 @@ SELECT
     end_year
 FROM 
     mortality_change
-ORDER BY reduction DESC;
+ORDER BY reduction DESC
+LIMIT 10;

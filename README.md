@@ -159,8 +159,14 @@ mm_measure > 400 AND
 exp_measure > 150
 ORDER BY mm_measure DESC;
 ```
-## *Insights*
 
+| Country  | Year | MM Measure | Expected Measure |
+|----------|------|------------|------------------|
+| ESWATINI | 2015 | 432        | 252.68           |
+
+## *Insights*
+- My custom filter showed that Eswatini was investing high expenditure health but still having high maternal mortality ratio.
+- This should alarm the country to review their initiatives on improving maternal health oucomes
 
 ### 🚀countries with fastest reduction in maternal deaths
 ```sql
@@ -180,8 +186,16 @@ FROM
     mortality_change
 ORDER BY reduction DESC;
 ```
-## *Insights*
+![alt text](Project_sql/imgs/REDUCTION.PNG)
+*Barchart showing which countries reduced their maternal deaths rapidly in five years time*
 
+## *Insights*
+- Nigeria Leads in Reduction. Nigeria had the highest reduction in absolute numbers (5,402) between 2015 and 2020. This suggests a significant effort in maternal health interventions or overall improvements in healthcare systems.Which is weird because if you look at my deep analyses you find that Nigeria is also the leading country with high maternal deaths, this shows despite  high maternal deaths the country is having strong initiatives which have reduced significantly the number of maternal deaths.
+- Ethiopia Shows Strong Progress.Ethiopia also had a notable reduction (3,426), indicating a substantial decline in maternal mortality. It could be due to improved healthcare access, policies, or interventions.
+- DR Congo, South Sudan, and Tanzania in Mid-Range.These three countries had reductions between 1,300 and 1,700, showing progress but still indicating a need for further intervention to match Nigeria and Ethiopia.
+- Lower Reductions in Madagascar, Ghana, and Niger.These countries had reductions below 500, which may suggest slower improvements in maternal healthcare or the need for additional resources and interventions.
+
+- Countries with the highest reductions likely implemented targeted maternal health policies, improved antenatal care, and strengthened healthcare systems to achieve these numbers.
 ---  
 ## **📈 Interactive Tableau Dashboard**  
 ### **Key KPIs & Visualizations:**
@@ -200,9 +214,9 @@ ORDER BY reduction DESC;
 
 🔗 **[View the Tableau Interactive Dashboard](https://public.tableau.com/shared/?:display_count=n&:origin=viz_share_link)**
 
-*Image of the Tableau dashboard*
-![Tableau dashboard](<Project_sql/Dashboard 2.png>)
 
+![Tableau dashboard](<Project_sql/imgs/Dashboard 2.png>)
+*Image of the Tableau dashboard*
 
 ---  
 ## **📂 Repository Structure**  

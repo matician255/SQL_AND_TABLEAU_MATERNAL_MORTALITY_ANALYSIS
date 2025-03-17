@@ -33,8 +33,10 @@ ORDER BY
 LIMIT 10;
 ```
 
+![alt text](imgs/top_10.PNG)
+*A bar chart showing the top ten countries which highest maternal deaths*
 ## *Insights*
-
+The trend suggests that certain regions might require targeted interventions to improve maternal healthcare due to large descrepancies in maternal deaths countries like Nigeria and Congo need special initiatives to lower the number of maternl deaths.
 
 ### 🚀 Maternal Mortality trend over time
 ```sql
@@ -48,9 +50,11 @@ GROUP BY
 ORDER BY 
     year;
 ```
+![alt text](imgs/trend.PNG)
+*Line chart showing the average trend of maternal deaths in Subsaharan countries 2015-2020*
 
 ## *Insights*
-
+The average maternal mortality ratio has been consistently declining over the years, so despite some countries having large number of maternal deaths, this shows there are good initiatives in place in some countries that help to lower the maternal deaths.
 
 ### 🚀 What countries met their target mortality ratio
 ```sql
@@ -64,9 +68,16 @@ mm_measure <= mm_target
 ORDER BY
 country, year
 ```
+![alt text](<imgs/pass target.PNG>)
+*Comparison barchart showing countries that reached their target mortality ratio*
 
 ## *Insights*
-
+- Both Mozambique and Seychelles have successfully met their maternal mortality targets.
+- Seychelles shows exceptional performance with a mortality rate 83.3% below target (3 vs 18).
+- Mozambique is also performing positively, with a 7.3% margin below target (127 vs 137).
+- The stark difference between these countries highlights significant healthcare disparities.
+- Seychelles represents a high-performing healthcare system typical of higher-income nations.
+- Mozambique shows progress but still faces challenges common in developing regions.
 
 ### 🚀 What countries have the highest gaps between their maternal mortality ratio and target
 ```sql
@@ -89,8 +100,16 @@ FROM
     ranked_gaps
 ORDER BY GAP DESC;
 ```
-## *Insights*
 
+![alt text](imgs/gap.PNG)
+*Barchart showing top 5 countries that are still behind to reaching their target mortality ratio*
+
+## *Insights*
+- Burundi has the highest maternal mortality gap (451) as of 2015
+- Benin follows with a gap of 383 (2020)
+- The average gap across these countries is 270.8
+- Possible Factors Contributing to the Gap
+Ccould be Lack of healthcare accessibility or funding, High burden of disease (e.g., infectious diseases, maternal health issues), or Socioeconomic disparities impacting healthcare delivery.
 
 ## 📌RELATIOSHIP BETWEEN SOCIOECONOMIC, HEALTHCARE FACTORS AND MATERNAL HEALTH OUTCOMES
 
@@ -113,7 +132,9 @@ JOIN
 ORDER BY mm_measure DESC
 ```
 ## *Insights*
+- Based on the analysis, there's a negative correlation of -0.64 between maternal mortality ratio and birth attended by skilled personnel. This suggests that asthe percentage of births attended by skilled health personnel tends to decrease the maternal ration increased.
 
+- There is inverse relationship clearly, with countries having higher maternal mortality ratio generally showing lower percentages of skilled birth rates.
 
 ### 🚀Is healthcare expenditure linked to better health outcomes
 ```SQL
@@ -129,8 +150,12 @@ JOIN
     AND maternal_deaths.year = health_expenditure.year
 ORDER BY m_deaths DESC;
 ```
-## *Insights*
 
+![alt text](imgs/exp_md.PNG)
+*Scatterplot showing if health expenditure affects maternal health outcome*
+## *Insights*
+- The analysis shows a weak negative correlation of -0.13 between health expenditure and maternal deaths, suggesting that as health expenditure increases, maternal deaths tend to decrease slightly, but the relationship isn't strong.
+- Seems like it doesnt matter how much is spend but how committed and strong the initiative is in addressing maternal health problem.
 
 ### 🚀Do more health facilities reduce maternal mortality
 ```SQL
