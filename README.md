@@ -164,6 +164,7 @@ ORDER BY mm_measure DESC;
 |----------|------|------------|------------------|
 | ESWATINI | 2015 | 432        | 252.68           |
 
+*Table showing maternal mortality ration and health expenditure of the respective country*
 ## *Insights*
 - My custom filter showed that Eswatini was investing high expenditure health but still having high maternal mortality ratio.
 - This should alarm the country to review their initiatives on improving maternal health oucomes
