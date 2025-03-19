@@ -219,7 +219,33 @@ ORDER BY reduction DESC;
 ![Tableau dashboard](<Project_sql/imgs/Dashboard 2.png>)
 *Image of the Tableau dashboard*
 
----  
+ 
+
+### 🎯**Key Insights and Recommendations on Maternal Health Outcomes**  
+
+#### **Key Insights**  
+
+1️⃣ **Countries with High Maternal Deaths Need Urgent Intervention**  
+   - Nigeria and the Democratic Republic of Congo have alarmingly high maternal deaths, indicating the need for targeted interventions.  
+   - **Recommendation**: Strengthen healthcare infrastructure, improve emergency obstetric care, and expand access to skilled birth attendants.  
+
+2️⃣ **Higher Doctor Density is Moderately Linked to Lower Maternal Mortality**  
+   - A negative correlation (-0.38) suggests that more doctors per population generally lead to lower maternal deaths.  
+   - **Recommendation**: Invest in training and retaining healthcare professionals, particularly in rural and underserved areas.  
+
+3️⃣ **Increased Healthcare Facilities Do Not Always Mean Lower Maternal Mortality**  
+   - The strong positive correlation (0.89) between facilities and maternal deaths suggests that quantity alone is insufficient—quality and accessibility matter more.  
+   - **Recommendation**: Improve facility staffing, equipment, and referral systems to ensure better service delivery.  
+
+4️⃣ **Poverty is a Strong Driver of Maternal Mortality**  
+   - Countries with higher poverty rates tend to have higher maternal mortality, reinforcing the socioeconomic impact on health outcomes.  
+   - **Recommendation**: Implement policies that improve women’s economic empowerment, social protection programs, and universal health coverage.  
+
+5️⃣ **Countries with High Health Expenditure Do Not Always Have Better Maternal Health Outcomes**  
+   - The weak negative correlation (-0.13) suggests that spending more on healthcare alone is not enough without strategic planning.  
+   - **Recommendation**: Ensure healthcare budgets are directed toward maternal health programs, community outreach, and preventive care.
+
+   ---  
 ## **📂 Repository Structure**  
 ```
 📂 maternal-mortality-analysis
@@ -229,12 +255,6 @@ ORDER BY reduction DESC;
 │-- README.md                   # Project documentation
 ```
 
----  
-## **🎯 Key Takeaways & Insights**  
-📌 .................  
-📌 ..............  
-📌 ...................
-
----  
+--- 
   
 
