@@ -213,7 +213,7 @@ ORDER BY reduction DESC;
 ✔️ **Interactive Maps & Bar Charts**  
 ✔️ **Comparisons of Maternal Mortality vs Economic Indicators** 
 
-🔗 **[View the Tableau Interactive Dashboard](https://public.tableau.com/shared/?:display_count=n&:origin=viz_share_link)**
+🔗 **[View the Tableau Interactive Dashboard](https://public.tableau.com/views/SubsaharanMaternalDeathAnalysis/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 
 ![Tableau dashboard](<Project_sql/imgs/Dashboard 2.png>)
