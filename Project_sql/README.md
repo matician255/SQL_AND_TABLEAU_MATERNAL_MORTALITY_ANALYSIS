@@ -177,8 +177,10 @@ SELECT
 FROM expenditure_vs_mm
 ORDER BY m_deaths DESC;
 ```
-## *Insights*
+![alt text](imgs/facilityvsmd.PNG)
 
+## *Insights*
+- The scatter plot shows the relationship between the number of healthcare facilities and maternal deaths. The correlation coefficient is 0.89, indicating a strong positive correlation. This suggests that countries with more healthcare facilities also tend to have higher maternal deaths, likely due to larger populations or under-resourced health systems.
 
 ### 🚀Is higher doctor density linked to lower mortality 
 ```SQL
@@ -203,7 +205,7 @@ ORDER BY m_deaths DESC;
 ```
 
 ## *Insights*
-
+- A correlation of -0.38 suggests a moderate negative correlation. This means that, generally, countries with higher doctor density tend to have lower maternal death rates, and vice versa. However, the relationship is not very strong, meaning other factors are also likely playing a significant role.
 
 ## 📌SOCIOECONOMIC FACTORS
 
@@ -232,7 +234,7 @@ FROM mm_poverty
 ORDER BY mm_measure DESC;
 ```
 ## *Insights*
-
+- There is a strong positive relationship between poverty rate and maternal mortality. Countries with higher poverty rates tend to have higher maternal mortality, highlighting the importance of addressing poverty to improve maternal health outcomes.
 
 ### 🚀 Does unemployment affect maternal mortality?
 ```SQL
@@ -248,5 +250,10 @@ ON maternal_mortality.country = unemployment_rate.country
 AND maternal_mortality.year = unemployment_rate.year
 ORDER BY maternal_mortality.mm_measure DESC;
 ```
-
+![alt text](imgs/povmm.PNG)
+*Scatter plot& Barchart showing relationship between maternal mortality and unemployment rate*
 ## *Insights*
+- The weak positive correlation suggests that while unemployment might play a role in maternal mortality, it's not the primary factor.
+- Other factors, such as access to healthcare, education, poverty, and cultural practices, likely have a more significant impact.
+- It is important to note that correlation does not equal causation.
+- The time series plots show that the relationship between these two factors can change over time.
