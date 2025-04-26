@@ -4,6 +4,11 @@
 ## **📌 Project Overview**  
 This project explores the factors influencing **maternal mortality** in **Sub-Saharan Africa**, using **SQL for data transformation and analysis** and **Tableau for interactive visualizations**.
 
+🔗 **[View the Tableau Interactive Dashboard](https://public.tableau.com/views/SubsaharanMaternalDeathAnalysis/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+
+![Tableau dashboard](<Project_sql/imgs/Dashboard 2.png>)
+*Image of the Tableau dashboard*
 **Checkout my indepth analysis here** : [Project_Analysis](/Project_sql/)
 
 🚀 **The question that am trying to answer are:**  
